@@ -1,0 +1,8 @@
+- create cmd level input testing for model functionality as side project
+- make the graphs view website able to switch between files
+    - make it so it can handle out of order by displaying the axes swapped
+- embed scripting lang for decoding stage
+
+
+- add incremental variance
+- add popularity contest (most commonly selected option)

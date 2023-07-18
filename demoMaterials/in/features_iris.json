@@ -1,0 +1,29 @@
+{
+    "featuresAndDomains": [
+        {
+            "name": "sepal_length",
+            "domain_type": "continuous",
+            "min": 4.3,
+            "max": 7.9
+        },
+        {
+            "name": "sepal_width",
+            "domain_type": "continuous",
+            "min": 2.0,
+            "max": 4.4
+        },
+        {
+            "name": "petal_length",
+            "domain_type": "continuous",
+            "min": 1.0,
+            "max": 6.9
+        },
+        {
+            "name": "petal_width",
+            "domain_type": "continuous",
+            "min": 0.1,
+            "max": 2.5
+        }
+	],
+	"constrainedFeatureSets": []
+}

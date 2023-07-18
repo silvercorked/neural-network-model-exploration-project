@@ -1,0 +1,59 @@
+look at bridge input data distribution. See whats distribution the feature has, try to sample along that distrubution
+
+Genetic algorithm
+ - cluster of samples aobut a point
+   - if all similar, uninteresting point
+   - else interesting and sample more
+ - mutations
+    - create variant of a parent that explores about another explored region
+
+
+
+generate all possible solutions to a constraint equation, but bin results based on when constraints come into play
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Full exploration algorithm:
+- 2 threads feed new coordinates to explored
+  - one will just walk along and hit every value (similar to my current next-ing behavior) (not at max depth)
+  - another will read output files and attempt to find interesting spaces and explore them at deeper depth
+    - perhaps a third thread which generates values as varying depths based on the distributions of values
+      - would walk along as the first does, but rather than pick values by incrementing a int-casted float, it picks a 
+        number between 1 and 52 (max double decimals) given by the density of values in the region and then increments that (for each coordinate) 
+      - this could also replace the normal walking along one
+  - these threads feed a shared threadpool
+- several threads are used to process these jobs created by these two threads
+  - processing a job means making the predicition on the model, decoding it, then dispatching the result for storage
+- the last branch takes the job input (coordinate location) and output (prediction) and arranges it in a file or number of files
+  - a file could be made for each combination of 2 (or every combination)
+  - information about prediction can be stored and then updated
+    - some values in some files will be updated more often than others, perhaps this space could be expanded into 2 sections, one that splits the data to be stored and one that takes data and updates files
+    - how to update if this branch should expect dupes? if shouldn't expect dupes, how will the exploring threads guarentee to never make a dupes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
