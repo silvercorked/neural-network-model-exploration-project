@@ -6,6 +6,7 @@ include_directories(include)
 include_directories(include/concepts)
 include_directories(include/core)
 include_directories(include/core/abstract)
+include_directories(include/programs)
 include_directories(include/util)
 
 # dependencies

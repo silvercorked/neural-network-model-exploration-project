@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 
+#include "Globals.hpp"
 #include "OverloadedLambda.hpp"
 #include "Domain.hpp"
 #include "ContinuousFeature.hpp"
@@ -19,10 +20,6 @@
 #include "RandomFeature.hpp"
 #include "OnlyOneHighBConstrainedFeatureSet.hpp"
 
-enum CONSTRAINT_TYPE {
-    ONLYONEHIGHBINARY = 0,
-    OTHER = 100
-};
 
 // helper constant for visitors
 template<class>

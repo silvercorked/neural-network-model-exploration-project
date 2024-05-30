@@ -2,6 +2,8 @@
 .vscode
 build/*
 !build/.gitignore
+build2/*
+!build2/.gitignore
 dependencies/FunctionalPlus/build/*
 dependencies/eigen/build/*
 dependencies/json/build/*
@@ -15,7 +17,6 @@ out/*
 !demoMaterials/*
 !dependencies/*
 !build/
-
-
+!build2/
 
 

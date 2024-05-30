@@ -21,6 +21,7 @@ namespace TimeManagers {
 		std::string getTimeSinceStart();
 		void printTimeSinceLastMark();
 		std::string getTimeSinceLastMark();
+        void printCurrentTimeAndDate();
 	};
 
     TimeManager::TimeManager() {
@@ -82,6 +83,12 @@ namespace TimeManagers {
         TimeManager::padLeft(millis, 3, '0');
         TimeManager::padLeft(micros, 3, '0');
         return hours + ":" + minutes + ":" + seconds + "." + millis + micros;
+    }
+
+    void TimeManager::printCurrentTimeAndDate() {
+        auto const time = std::chrono::system_clock::now();
+        const std::time_t t_c = std::chrono::system_clock::to_time_t(time);
+        std::cout << "The system clock is currently at " << std::ctime(&t_c);
     }
 
     TimeManager::~TimeManager() {}
